@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Android" parallel="false" thread-count="1">
+
+	<!-- <parameter name="userType" value="${UserType}"/> Guest/NonSubscribedUser/SubscribedUser 
+		<parameter name="runMode" value="${runMode}"/> <parameter name="runModule" 
+		value="${runModule}"/> <parameter name="browserType" value="${browserType}"/> 
+		<parameter name="url" value="${url}" />-->
+		
+	<parameter name="userType" value="Guest" />  
+	<parameter name="runModule" value="Suite" />
+	<parameter name="runMode" value="Suites" /> 
+	<parameter name="testExecutionKey" value="PP-27" />
+
+	<parameter name="AuthenticationURI" value="https://user-gateway.test.ideopay.in/api/v1/users/android/authentication" />
+	<parameter name="OTP-URI" value="https://user-gateway.test.ideopay.in/api/v1/users/android/send-otp"/>
+	
+	<listeners>
+		<listener class-name="com.extent.ExtentReporter" />
+	</listeners>
+
+
+	<test name="RingPay">
+   		<parameter name="MobileNumber" value="9731239214"/>
+   		<parameter name="MerchantID" value="rpy.ipmerchant1234191702@icici"/>
+   		<parameter name="exceedAmount" value="5000"/>
+   		<parameter name="withinLimitAmount" value="1"/>
+   		<parameter name="CVV" value="123"/>
+		<classes>
+			<class name="com.RingPay.TestScripts.RingPayTestScripts" /> 
+		</classes>
+	</test>
+</suite>

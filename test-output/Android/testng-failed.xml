@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Android]">
+  <parameter name="testExecutionKey" value="PP-27"/>
+  <parameter name="AuthenticationURI" value="https://user-gateway.test.ideopay.in/api/v1/users/android/authentication"/>
+  <parameter name="runModule" value="Suite"/>
+  <parameter name="OTP-URI" value="https://user-gateway.test.ideopay.in/api/v1/users/android/send-otp"/>
+  <parameter name="userType" value="Guest"/>
+  <parameter name="runMode" value="Suites"/>
+  <listeners>
+    <listener class-name="com.extent.ExtentReporter"/>
+  </listeners>
+  <test thread-count="1" name="RingPay(failed)">
+    <parameter name="withinLimitAmount" value="1"/>
+    <parameter name="MobileNumber" value="9731239214"/>
+    <parameter name="CVV" value="123"/>
+    <parameter name="exceedAmount" value="5000"/>
+    <parameter name="MerchantID" value="rpy.ipmerchant1234191702@icici"/>
+    <classes>
+      <class name="com.RingPay.TestScripts.RingPayTestScripts">
+        <methods>
+          <include name="Before"/>
+          <include name="ringAuthApi_Negative"/>
+          <include name="ringMerchantPay"/>
+          <include name="ringRepayment"/>
+          <include name="ringAuthApi_Positive"/>
+          <include name="ringPayLogin"/>
+          <include name="ringLogout"/>
+          <include name="ringPayAppLaunch"/>
+          <include name="ringOtpApi_Positive"/>
+          <include name="ringAppQuit"/>
+          <include name="ringOtpApi_Negative"/>
+        </methods>
+      </class> <!-- com.RingPay.TestScripts.RingPayTestScripts -->
+    </classes>
+  </test> <!-- RingPay(failed) -->
+</suite> <!-- Failed suite [Android] -->
