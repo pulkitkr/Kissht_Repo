@@ -26,6 +26,8 @@
    		<parameter name="LessThanTenDigits_MobileNumber" value="8124569"/>
    		<parameter name="SpecialCharacters_MobileNumber" value="8124,4"/>
    		<parameter name="Space_MobileNumber" value="8124 4"/>
+   		<parameter name="LessThanSixDigitOTP" value="12345"/>
+   		<parameter name="InvalidOTP" value="123123"/>
    		<parameter name="MerchantID" value="rpy.ipmerchant1234191702@icici"/>
    		<parameter name="exceedAmount" value="5000"/>
    		<parameter name="withinLimitAmount" value="1"/>
