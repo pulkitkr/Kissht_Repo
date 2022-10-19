@@ -8,7 +8,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.utility.Utilities;
-
+import com.android.RingPayPages.RingLoginPage;
 import com.extent.ExtentReporter;
 import com.utility.Utilities;
 
@@ -24,13 +24,14 @@ public class RingPayTestScripts {
 	}
 	
 	@Test(priority = 0)
-	@Parameters({"userType"})
-    public void ringPayAppLaunch() throws Exception {
-		ringPayBusiness.RingPayAppLaunch();
+	@Parameters({"Valid_MobileNumber","EditValid_MobileNumber","LessThanTenDigits_MobileNumber","SpecialCharacters_MobileNumber","Space_MobileNumber"})
+    public void  User_Playstore_Flow(String validMob, String editMob, String lessThanTenMob, String specialCharMob, String spaceMob) throws Exception {
+		ringPayBusiness.User_Play_Store_Flow(validMob,editMob,lessThanTenMob,specialCharMob,spaceMob);
+		RingLoginPage.getEditMob(editMob);
 		ExtentReporter.jiraID = "PP-28";
 	}
 
-	@Test(priority = 1)
+	/*@Test(priority = 1)
 	@Parameters({"MobileNumber"})
 	public void ringPayLogin(String mobileNumber) throws Exception {
 		ringPayBusiness.ringPayLogin(mobileNumber);
@@ -89,5 +90,5 @@ public class RingPayTestScripts {
 	@AfterTest
 	public void ringAppQuit() throws Exception{
 		ringPayBusiness.TearDown();
-	}
+	}*/
 }

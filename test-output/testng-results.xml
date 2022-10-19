@@ -1,68 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="9" failed="9" ignored="0" total="18" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Android" duration-ms="13719" started-at="2022-10-12T13:17:39 IST" finished-at="2022-10-12T13:17:53 IST">
+  <suite name="Android" duration-ms="77397" started-at="2022-10-19T10:37:01 IST" finished-at="2022-10-19T10:38:19 IST">
     <groups>
     </groups>
-    <test name="RingPay" duration-ms="13719" started-at="2022-10-12T13:17:39 IST" finished-at="2022-10-12T13:17:53 IST">
+    <test name="RingPay" duration-ms="77397" started-at="2022-10-19T10:37:01 IST" finished-at="2022-10-19T10:38:19 IST">
       <class name="com.RingPay.TestScripts.RingPayTestScripts">
-        <test-method status="SKIP" signature="Before()[pri:0, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="Before" is-config="true" duration-ms="3381" started-at="2022-10-12T13:17:49 IST" finished-at="2022-10-12T13:17:52 IST">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Device not connected OR Appium Studio service is down...]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Device not connected OR Appium Studio service is down...
-at com.driverInstance.DriverInstance.<init>(DriverInstance.java:74)
-at com.driverInstance.CommandBase.<init>(CommandBase.java:51)
-at com.business.RingPay.RingPayBusinessLogic.<init>(RingPayBusinessLogic.java:29)
-at com.RingPay.TestScripts.RingPayTestScripts.Before(RingPayTestScripts.java:23)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:619)
-at org.testng.TestRunner.beforeRun(TestRunner.java:609)
-at org.testng.TestRunner.run(TestRunner.java:580)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+        <test-method status="PASS" signature="Before()[pri:0, instance:com.RingPay.TestScripts.RingPayTestScripts@15bbf42f]" name="Before" is-config="true" duration-ms="13787" started-at="2022-10-19T10:37:11 IST" finished-at="2022-10-19T10:37:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Before -->
-        <test-method status="FAIL" signature="ringPayAppLaunch()[pri:0, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringPayAppLaunch" duration-ms="469" started-at="2022-10-12T13:17:52 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method status="FAIL" signature="User_Playstore_Flow(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.RingPay.TestScripts.RingPayTestScripts@15bbf42f]" name="User_Playstore_Flow" duration-ms="54061" started-at="2022-10-19T10:37:24 IST" finished-at="2022-10-19T10:38:19 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[9731239214]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8123267268]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[8124569]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[8124,4]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8124 4]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[nodeName cannot be null or empty]]>
+              <![CDATA[The element 'By.xpath: //*[@class='android.widget.EditText']' does not exist in DOM anymore
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-077G3EM', ip: '172.31.98.208', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.ideopay.user.MainActivity, appPackage: com.ideopay.user.debug, autoAcceptAlerts: true, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.ideopay.user.MainActivity, appPackage: com.ideopay.user.debug, autoAcceptAlerts: true, automationName: uiautomator2, deviceName: Android, fullReset: false, newCommandTimeout: 300, platformName: android}, deviceApiLevel: 30, deviceManufacturer: realme, deviceModel: RMX3581, deviceName: 2713171100005492, deviceScreenDensity: 320, deviceScreenSize: 720x1600, deviceUDID: 2713171100005492, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 300, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 64, takesScreenshot: true, viewportRect: {height: 1384, left: 0, top: 64, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: ce2e1c61-6004-4cd6-b6de-0c6b79a8f5a2]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: nodeName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:166)
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:274)
-at com.extent.ExtentReporter.HeaderChildNode(ExtentReporter.java:251)
-at com.extent.ExtentReporter.onTestSkipped(ExtentReporter.java:241)
-at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:57)
-at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
-at org.testng.internal.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:446)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:542)
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: The element 'By.xpath: //*[@class='android.widget.EditText']' does not exist in DOM anymore
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-077G3EM', ip: '172.31.98.208', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.ideopay.user.MainActivity, appPackage: com.ideopay.user.debug, autoAcceptAlerts: true, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.ideopay.user.MainActivity, appPackage: com.ideopay.user.debug, autoAcceptAlerts: true, automationName: uiautomator2, deviceName: Android, fullReset: false, newCommandTimeout: 300, platformName: android}, deviceApiLevel: 30, deviceManufacturer: realme, deviceModel: RMX3581, deviceName: 2713171100005492, deviceScreenDensity: 320, deviceScreenSize: 720x1600, deviceUDID: 2713171100005492, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 300, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 64, takesScreenshot: true, viewportRect: {height: 1384, left: 0, top: 64, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: ce2e1c61-6004-4cd6-b6de-0c6b79a8f5a2
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
+at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
+at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
+at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:134)
+at com.utility.Utilities.getAttributValue(Utilities.java:1313)
+at com.business.RingPay.RingPayBusinessLogic.User_Play_Store_Flow(RingPayBusinessLogic.java:227)
+at com.RingPay.TestScripts.RingPayTestScripts.User_Playstore_Flow(RingPayTestScripts.java:29)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
@@ -87,727 +108,10 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ringPayAppLaunch -->
-        <test-method status="SKIP" signature="ringPayAppLaunch()[pri:0, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringPayAppLaunch" duration-ms="0" started-at="2022-10-12T13:17:52 IST" finished-at="2022-10-12T13:17:52 IST">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Device not connected OR Appium Studio service is down...]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Device not connected OR Appium Studio service is down...
-at com.driverInstance.DriverInstance.<init>(DriverInstance.java:74)
-at com.driverInstance.CommandBase.<init>(CommandBase.java:51)
-at com.business.RingPay.RingPayBusinessLogic.<init>(RingPayBusinessLogic.java:29)
-at com.RingPay.TestScripts.RingPayTestScripts.Before(RingPayTestScripts.java:23)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:619)
-at org.testng.TestRunner.beforeRun(TestRunner.java:609)
-at org.testng.TestRunner.run(TestRunner.java:580)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringPayAppLaunch -->
-        <test-method status="FAIL" signature="ringPayLogin(java.lang.String)[pri:1, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringPayLogin" duration-ms="16" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[nodeName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: nodeName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:166)
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:274)
-at com.extent.ExtentReporter.HeaderChildNode(ExtentReporter.java:251)
-at com.extent.ExtentReporter.onTestSkipped(ExtentReporter.java:241)
-at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:57)
-at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
-at org.testng.internal.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:446)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:542)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringPayLogin -->
-        <test-method status="SKIP" signature="ringPayLogin(java.lang.String)[pri:1, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringPayLogin" duration-ms="0" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Device not connected OR Appium Studio service is down...]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Device not connected OR Appium Studio service is down...
-at com.driverInstance.DriverInstance.<init>(DriverInstance.java:74)
-at com.driverInstance.CommandBase.<init>(CommandBase.java:51)
-at com.business.RingPay.RingPayBusinessLogic.<init>(RingPayBusinessLogic.java:29)
-at com.RingPay.TestScripts.RingPayTestScripts.Before(RingPayTestScripts.java:23)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:619)
-at org.testng.TestRunner.beforeRun(TestRunner.java:609)
-at org.testng.TestRunner.run(TestRunner.java:580)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringPayLogin -->
-        <test-method status="FAIL" signature="ringMerchantPay(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringMerchantPay" duration-ms="3" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[nodeName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: nodeName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:166)
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:274)
-at com.extent.ExtentReporter.HeaderChildNode(ExtentReporter.java:251)
-at com.extent.ExtentReporter.onTestSkipped(ExtentReporter.java:241)
-at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:57)
-at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
-at org.testng.internal.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:446)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:542)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringMerchantPay -->
-        <test-method status="SKIP" signature="ringMerchantPay(java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringMerchantPay" duration-ms="0" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Device not connected OR Appium Studio service is down...]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Device not connected OR Appium Studio service is down...
-at com.driverInstance.DriverInstance.<init>(DriverInstance.java:74)
-at com.driverInstance.CommandBase.<init>(CommandBase.java:51)
-at com.business.RingPay.RingPayBusinessLogic.<init>(RingPayBusinessLogic.java:29)
-at com.RingPay.TestScripts.RingPayTestScripts.Before(RingPayTestScripts.java:23)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:619)
-at org.testng.TestRunner.beforeRun(TestRunner.java:609)
-at org.testng.TestRunner.run(TestRunner.java:580)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringMerchantPay -->
-        <test-method status="FAIL" signature="ringRepayment(java.lang.String, java.lang.String)[pri:3, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringRepayment" duration-ms="2" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[nodeName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: nodeName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:166)
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:274)
-at com.extent.ExtentReporter.HeaderChildNode(ExtentReporter.java:251)
-at com.extent.ExtentReporter.onTestSkipped(ExtentReporter.java:241)
-at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:57)
-at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
-at org.testng.internal.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:446)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:542)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringRepayment -->
-        <test-method status="SKIP" signature="ringRepayment(java.lang.String, java.lang.String)[pri:3, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringRepayment" duration-ms="0" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Device not connected OR Appium Studio service is down...]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Device not connected OR Appium Studio service is down...
-at com.driverInstance.DriverInstance.<init>(DriverInstance.java:74)
-at com.driverInstance.CommandBase.<init>(CommandBase.java:51)
-at com.business.RingPay.RingPayBusinessLogic.<init>(RingPayBusinessLogic.java:29)
-at com.RingPay.TestScripts.RingPayTestScripts.Before(RingPayTestScripts.java:23)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:619)
-at org.testng.TestRunner.beforeRun(TestRunner.java:609)
-at org.testng.TestRunner.run(TestRunner.java:580)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringRepayment -->
-        <test-method status="FAIL" signature="ringLogout()[pri:4, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringLogout" duration-ms="3" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[nodeName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: nodeName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:166)
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:274)
-at com.extent.ExtentReporter.HeaderChildNode(ExtentReporter.java:251)
-at com.extent.ExtentReporter.onTestSkipped(ExtentReporter.java:241)
-at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:57)
-at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
-at org.testng.internal.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:446)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:542)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringLogout -->
-        <test-method status="SKIP" signature="ringLogout()[pri:4, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringLogout" duration-ms="0" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Device not connected OR Appium Studio service is down...]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Device not connected OR Appium Studio service is down...
-at com.driverInstance.DriverInstance.<init>(DriverInstance.java:74)
-at com.driverInstance.CommandBase.<init>(CommandBase.java:51)
-at com.business.RingPay.RingPayBusinessLogic.<init>(RingPayBusinessLogic.java:29)
-at com.RingPay.TestScripts.RingPayTestScripts.Before(RingPayTestScripts.java:23)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:619)
-at org.testng.TestRunner.beforeRun(TestRunner.java:609)
-at org.testng.TestRunner.run(TestRunner.java:580)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringLogout -->
-        <test-method status="FAIL" signature="ringOtpApi_Positive(java.lang.String)[pri:5, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringOtpApi_Positive" duration-ms="2" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[nodeName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: nodeName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:166)
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:274)
-at com.extent.ExtentReporter.HeaderChildNode(ExtentReporter.java:251)
-at com.extent.ExtentReporter.onTestSkipped(ExtentReporter.java:241)
-at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:57)
-at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
-at org.testng.internal.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:446)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:542)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringOtpApi_Positive -->
-        <test-method status="SKIP" signature="ringOtpApi_Positive(java.lang.String)[pri:5, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringOtpApi_Positive" duration-ms="0" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Device not connected OR Appium Studio service is down...]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Device not connected OR Appium Studio service is down...
-at com.driverInstance.DriverInstance.<init>(DriverInstance.java:74)
-at com.driverInstance.CommandBase.<init>(CommandBase.java:51)
-at com.business.RingPay.RingPayBusinessLogic.<init>(RingPayBusinessLogic.java:29)
-at com.RingPay.TestScripts.RingPayTestScripts.Before(RingPayTestScripts.java:23)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:619)
-at org.testng.TestRunner.beforeRun(TestRunner.java:609)
-at org.testng.TestRunner.run(TestRunner.java:580)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringOtpApi_Positive -->
-        <test-method status="SKIP" signature="ringOtpApi_Negative(java.lang.String)[pri:6, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringOtpApi_Negative" duration-ms="0" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Device not connected OR Appium Studio service is down...]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Device not connected OR Appium Studio service is down...
-at com.driverInstance.DriverInstance.<init>(DriverInstance.java:74)
-at com.driverInstance.CommandBase.<init>(CommandBase.java:51)
-at com.business.RingPay.RingPayBusinessLogic.<init>(RingPayBusinessLogic.java:29)
-at com.RingPay.TestScripts.RingPayTestScripts.Before(RingPayTestScripts.java:23)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:619)
-at org.testng.TestRunner.beforeRun(TestRunner.java:609)
-at org.testng.TestRunner.run(TestRunner.java:580)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringOtpApi_Negative -->
-        <test-method status="FAIL" signature="ringOtpApi_Negative(java.lang.String)[pri:6, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringOtpApi_Negative" duration-ms="2" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[nodeName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: nodeName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:166)
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:274)
-at com.extent.ExtentReporter.HeaderChildNode(ExtentReporter.java:251)
-at com.extent.ExtentReporter.onTestSkipped(ExtentReporter.java:241)
-at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:57)
-at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
-at org.testng.internal.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:446)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:542)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringOtpApi_Negative -->
-        <test-method status="SKIP" signature="ringAuthApi_Positive(java.lang.String)[pri:7, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringAuthApi_Positive" duration-ms="0" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Device not connected OR Appium Studio service is down...]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Device not connected OR Appium Studio service is down...
-at com.driverInstance.DriverInstance.<init>(DriverInstance.java:74)
-at com.driverInstance.CommandBase.<init>(CommandBase.java:51)
-at com.business.RingPay.RingPayBusinessLogic.<init>(RingPayBusinessLogic.java:29)
-at com.RingPay.TestScripts.RingPayTestScripts.Before(RingPayTestScripts.java:23)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:619)
-at org.testng.TestRunner.beforeRun(TestRunner.java:609)
-at org.testng.TestRunner.run(TestRunner.java:580)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringAuthApi_Positive -->
-        <test-method status="FAIL" signature="ringAuthApi_Positive(java.lang.String)[pri:7, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringAuthApi_Positive" duration-ms="3" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[nodeName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: nodeName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:166)
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:274)
-at com.extent.ExtentReporter.HeaderChildNode(ExtentReporter.java:251)
-at com.extent.ExtentReporter.onTestSkipped(ExtentReporter.java:241)
-at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:57)
-at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
-at org.testng.internal.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:446)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:542)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringAuthApi_Positive -->
-        <test-method status="FAIL" signature="ringAuthApi_Negative(java.lang.String)[pri:8, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringAuthApi_Negative" duration-ms="3" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[nodeName cannot be null or empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: nodeName cannot be null or empty
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:166)
-at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:274)
-at com.extent.ExtentReporter.HeaderChildNode(ExtentReporter.java:251)
-at com.extent.ExtentReporter.onTestSkipped(ExtentReporter.java:241)
-at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:57)
-at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
-at org.testng.internal.TestInvoker.invokeListenersForSkippedTestResult(TestInvoker.java:446)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:542)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringAuthApi_Negative -->
-        <test-method status="SKIP" signature="ringAuthApi_Negative(java.lang.String)[pri:8, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringAuthApi_Negative" duration-ms="0" started-at="2022-10-12T13:17:53 IST" finished-at="2022-10-12T13:17:53 IST">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[Device not connected OR Appium Studio service is down...]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: Device not connected OR Appium Studio service is down...
-at com.driverInstance.DriverInstance.<init>(DriverInstance.java:74)
-at com.driverInstance.CommandBase.<init>(CommandBase.java:51)
-at com.business.RingPay.RingPayBusinessLogic.<init>(RingPayBusinessLogic.java:29)
-at com.RingPay.TestScripts.RingPayTestScripts.Before(RingPayTestScripts.java:23)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:619)
-at org.testng.TestRunner.beforeRun(TestRunner.java:609)
-at org.testng.TestRunner.run(TestRunner.java:580)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringAuthApi_Negative -->
-        <test-method status="SKIP" signature="ringAppQuit()[pri:0, instance:com.RingPay.TestScripts.RingPayTestScripts@48974e45]" name="ringAppQuit" is-config="true" duration-ms="-1665560873146" started-at="2022-10-12T13:17:53 IST" finished-at="1970-01-01T05:30:00 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ringAppQuit -->
+        </test-method> <!-- User_Playstore_Flow -->
       </class> <!-- com.RingPay.TestScripts.RingPayTestScripts -->
     </test> <!-- RingPay -->
   </suite> <!-- Android -->

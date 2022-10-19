@@ -21,7 +21,11 @@
 
 
 	<test name="RingPay">
-   		<parameter name="MobileNumber" value="9731239214"/>
+   		<parameter name="Valid_MobileNumber" value="9731239214"/>
+   		<parameter name="EditValid_MobileNumber" value="8123267268"/>
+   		<parameter name="LessThanTenDigits_MobileNumber" value="8124569"/>
+   		<parameter name="SpecialCharacters_MobileNumber" value="8124,4"/>
+   		<parameter name="Space_MobileNumber" value="8124 4"/>
    		<parameter name="MerchantID" value="rpy.ipmerchant1234191702@icici"/>
    		<parameter name="exceedAmount" value="5000"/>
    		<parameter name="withinLimitAmount" value="1"/>

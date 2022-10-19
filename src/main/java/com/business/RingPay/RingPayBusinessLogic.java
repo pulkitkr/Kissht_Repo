@@ -5,6 +5,7 @@ import static org.testng.AssertJUnit.assertNotNull;
 
 import java.io.IOException;
 
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
@@ -92,45 +93,177 @@ public class RingPayBusinessLogic extends Utilities{
 	 * 
 	 */
 	
-	public void RingPayAppLaunch() throws Exception {
-		extent.HeaderChildNode("RingPay App Launch");
+	public void User_Play_Store_Flow(String validMob, String editMob, String lessThanTenMob, String specialCharMob, String spaceMob) throws Exception {
+		extent.HeaderChildNode("User Play store Flow Module");
 
 		explicitWaitVisibility(RingLoginPage.objCamPermHeader,20);
-		if(verifyElementPresent(RingLoginPage.objCamPermHeader, "Camera Permission required")) {
-			String camPermHeaderTxt = getText(RingLoginPage.objCamPermHeader);
-			Assert.assertEquals(camPermHeaderTxt, "Camera Permission required");
-			logger.info("Camera Permission required popup");
-			extent.extentLoggerPass("Camera Permission popup", "Camera Permission required popup");
+		verifyElementPresent(RingLoginPage.objCamPermHeader, "Camera Permission required");
+		String camPermHeaderTxt = getText(RingLoginPage.objCamPermHeader);
+		softAssertion.assertEquals(camPermHeaderTxt, "Camera Permission required");
+		logger.info("Camera Permission required popup");
+		extent.extentLogger("PASS", "TC_Ring_Core_01 - To Verify the Login screen when user opens the app by clicking on App Icon");
 
-			if(verifyElementPresent(RingLoginPage.objCamPermPopUp,"Enable Camera Permissions button")) {
-				explicitWaitVisibility(RingLoginPage.objCamPermPopUp,10);
-				Aclick(RingLoginPage.objCamPermPopUp, "Enable permissions button");
+		explicitWaitVisibility(RingLoginPage.objCamPermPopUp,10);
+	    Aclick(RingLoginPage.objCamPermPopUp, "Enable permissions button");
+		logger.info("Foreground allow camera permissions");
+		extent.extentLoggerPass("Foreground allow camera permissions", "Foreground allow camera permissions options");
+		explicitWaitVisibility(RingLoginPage.objAllowCamera,10);
+		Aclick(RingLoginPage.objAllowCamera, "While using the app foreground camera permission option");
+					
+		explicitWaitVisibility(RingLoginPage.objQrCodeHeader,10);		
+		logger.info("Don't have QR Code header");
+		String qrCodeHeader = getText(RingLoginPage.objQrCodeHeader);
+		softAssertion.assertEquals(qrCodeHeader, "Don't have a QR code?");
+		extent.extentLoggerPass("TC_Ring_Core_02", "TC_Ring_Core_02 - To verify When User selects Enable Permission option");	
+		
+		explicitWaitVisibility(RingLoginPage.objLoginLink,15);
+		Aclick(RingLoginPage.objLoginLink, "Signup/Login link");
+		
+		logger.info("Signup/Login Header");
+		String loginHeaderTxt = getText(RingLoginPage.objLoginHeader);
+		softAssertion.assertEquals(loginHeaderTxt, "Sign Up / Login");
+		
+		String mobileTxt = getText(RingLoginPage.objLoginMobile);
+		String googleTxt = getText(RingLoginPage.objLoginGoogle);
+		String facebookTxt = getText(RingLoginPage.objLoginFacebook);
+		String termsTxt = getText(RingLoginPage.objTermsLink_PrivacyFooter);
+		//String privacyTxt = getText(RingLoginPage.objPrivacyPolicyFooter);
+		
+		softAssertion.assertEquals(mobileTxt, "Continue with Mobile");
+		softAssertion.assertEquals(googleTxt, "Continue with Google");
+		softAssertion.assertEquals(facebookTxt, "Continue with Facebook");
+		softAssertion.assertEquals(termsTxt, " Terms of Services &  Privacy Policy");
+		
+		extent.extentLoggerPass("TC_Ring_Core_03", "TC_Ring_Core_03 - To verify User Selects signup/Login option under Don't have a QR Code?");
+		
+		explicitWaitVisibility(RingLoginPage.objLoginMobile,10);
+		Aclick(RingLoginPage.objLoginMobile, "Continue with Mobile option");
 
-				if(verifyElementPresent(RingLoginPage.objAllowCamera,"Foreground allow camera permissions")) {
-					logger.info("Foreground allow camera permissions");
-					extent.extentLoggerPass("Foreground allow camera permissions", "Foreground allow camera permissions options");
-					explicitWaitVisibility(RingLoginPage.objAllowCamera,10);
-					Aclick(RingLoginPage.objAllowCamera, "While using the app foreground camera permission option");
-				}
+		explicitWaitVisibility(RingLoginPage.objNoneBtn,15);
+		String noneOfAboveTxt = getText(RingLoginPage.objNoneBtn);
+		logger.info("True caller popup");
+		softAssertion.assertEquals(noneOfAboveTxt, "NONE OF THE ABOVE");
+		extent.extentLoggerPass("TC_Ring_Core_04", "TC_Ring_Core_04 - To Verify when user Continue with mobile option");
+		
+		Aclick(RingLoginPage.objNoneBtn, "None of the above");
+		
+		explicitWaitVisibility(RingLoginPage.objVerifyMobHeader,10);
+		logger.info("Verify Mobile Header");
+		String verifyMobHeaderTxt = getText(RingLoginPage.objVerifyMobHeader);
+		softAssertion.assertEquals(verifyMobHeaderTxt, "Verify Mobile");
+		explicitWaitVisibility(RingLoginPage.objMobTextField,10);
+		extent.extentLoggerPass("TC_Ring_Core_05", "TC_Ring_Core_05 - To Verify the Verify mobile screen");
+		
+		Aclick(RingLoginPage.objMobTextField,"Mobile text field");
+		type(RingLoginPage.objMobTextField,lessThanTenMob,"Mobile text field");
+		logger.info("Verify mobile number with <10 digits");
+		Aclick(RingLoginPage.objNextBtn, "Next Button");
+		explicitWaitVisibility(RingLoginPage.objMobError,10);
+		String errorMsg = getText(RingLoginPage.objMobError);
+		softAssertion.assertEquals(errorMsg, " Please enter valid mobile number");
+		extent.extentLoggerPass("TC_Ring_Core_07", "TC_Ring_Core_07 - To Verify User enter mobile number less than 10 digit");
+		
+		clearField(RingLoginPage.objMobTextField,"Mobile Text Field");
+		type(RingLoginPage.objMobTextField,specialCharMob,"Mobile text field");
+		logger.info("Verify mobile number with special characters");
+		explicitWaitVisibility(RingLoginPage.objMobError,10);
+		softAssertion.assertEquals(errorMsg, " Please enter valid mobile number");
+		extent.extentLoggerPass("TC_Ring_Core_10", "TC_Ring_Core_10 - To Verify User tries enter punctuations or special character in field");
+		
+		clearField(RingLoginPage.objMobTextField,"Mobile Text Field");
+		type(RingLoginPage.objMobTextField,spaceMob,"Mobile text field");
+		logger.info("Verify mobile number with space in between");
+		explicitWaitVisibility(RingLoginPage.objMobError,10);
+		softAssertion.assertEquals(errorMsg, " Please enter valid mobile number");
+		extent.extentLoggerPass("TC_Ring_Core_11", "TC_Ring_Core_11 - To Verify User tries enter punctuations or special character in field");
+		
+		clearField(RingLoginPage.objMobTextField,"Mobile Text Field");
+		type(RingLoginPage.objMobTextField,validMob,"Mobile text field");
+		logger.info("Verify mobile number with entering valid number");
+		explicitWaitVisibility(RingLoginPage.objOtpHeader,10);
+		String otpHeaderTxt = getText(RingLoginPage.objOtpHeader);
+		softAssertion.assertEquals(otpHeaderTxt, "Enter OTP");
+		extent.extentLoggerPass("TC_Ring_Core_13", "TC_Ring_Core_13 - To Verify User tries enter valid mobile number");
+		
+		explicitWaitClickable(RingLoginPage.objEditMobNo,10);
+		
+		Aclick(RingLoginPage.objEditMobNo,"Edit Mobile number");
+		extent.extentLoggerPass("TC_Ring_Core_14", "TC_Ring_Core_14 - To Verify User should able to see Edit mobile no option");
+		
+		explicitWaitVisibility(RingLoginPage.objNoneBtn,15);
+		logger.info("True caller popup");
+		Aclick(RingLoginPage.objNoneBtn, "None of the above");
+		logger.info("Verify Mobile Header");
+		softAssertion.assertEquals(verifyMobHeaderTxt, "Verify Mobile");
+		Aclick(RingLoginPage.objMobTextField,"Mobile text field");
+		type(RingLoginPage.objMobTextField,editMob,"Mobile text field");
+		explicitWaitVisibility(RingLoginPage.getEditMob(editMob),10);
+		String mobNoTxt = getText(RingLoginPage.getEditMob(editMob));
+		String mobNoText = mobNoTxt.substring(16, 26);
+		System.out.println(mobNoText);
+		softAssertion.assertNotEquals(validMob, mobNoText); //do the parameterization
+		extent.extentLoggerPass("TC_Ring_Core_16", "TC_Ring_Core_16 - To verify user clicks continue button after mobile number modification"); //user automatically goes to OTP generation page
+		
+		explicitWaitVisibility(RingLoginPage.OtpAutoRead,10);
+		WebElement resendOtp = findElement(RingLoginPage.resendOtpTxt);
+		String clickable = getAttributValue("clickable",RingLoginPage.resendOtpTxt);
+		softAssertion.assertEquals("false", clickable);
+		extent.extentLoggerPass("TC_Ring_Core_19", "TC_Ring_Core_19 - To Verify the text given below the OTP number box when the timer is in progress");
+		
+		//explicitWaitVisibilityNonDefault(RingLoginPage.OtpTimeOut,90);
+		//String focused = getAttributValue("focused",RingLoginPage.objOtpTxtField1);
+		//System.out.println(focused);
+		explicitWaitClickable(RingLoginPage.resendOtpTxt,10);
+		extent.extentLoggerPass("TC_Ring_Core_20", "TC_Ring_Core_20 - To Verify the text given below the OTP number box when the timer is completed.");
+		
+		//String focused = getAttributValue("focused",RingLoginPage.objOtpTxtField1);
+		//Aclick(RingLoginPage.objOtpHeader,"Enter OTP header to lose focus");
+		String focused_before = getAttributValue("focused",RingLoginPage.objOtpTxtField1);
+		System.out.println(focused_before);
+		softAssertion.assertEquals("false", focused_before);
+		extent.extentLoggerPass("TC_Ring_Core_21", "TC_Ring_Core_21 - To Verify the OTP number box behaviour when the timer is started.");
+		
+		Aclick(RingLoginPage.objOtpTxtField1,"Otp text field");
+		String focused_after = getAttributValue("focused",RingLoginPage.objOtpTxtField1);
+		System.out.println(focused_after);
+		softAssertion.assertEquals("true", focused_after);
+		extent.extentLoggerPass("TC_Ring_Core_22", "TC_Ring_Core_22 - To Verify the OTP number box behaviour when the timer is completed.");
+		
+		type(RingLoginPage.objOtpTxtField1,"12345","Enter OTP");
+		Boolean Otp_flag = verifyElementNotPresent(RingLoginPage.objQrCodeHeader,10);
+		softAssertion.assertEquals(false, Otp_flag);
+		extent.extentLoggerPass("TC_Ring_Core_26", "TC_Ring_Core_26 - To Verify if user enters less than 6 digit number");
+		
+		clearField(RingLoginPage.objOtpTxtField1,"Enter OTP");
+		type(RingLoginPage.objOtpTxtField1,"123123","Enter OTP");
+		explicitWaitVisibility(RingLoginPage.OtpError,10);		
+		logger.info("OTP Error message");
+		String otpErrorTxt = getText(RingLoginPage.OtpError);
+		softAssertion.assertEquals(otpErrorTxt, "You have entered incorrect or expired OTP");
+		extent.extentLoggerPass("TC_Ring_Core_23", "TC_Ring_Core_23 - To Verify User enter invalid OTP");
+		
+		softAssertion.assertAll();
+		
+	}
+	
+	public void cameraPermission() throws Exception {
+		explicitWaitVisibility(RingLoginPage.objCamPermHeader,20);
+		verifyElementPresent(RingLoginPage.objCamPermHeader, "Camera Permission required");
+		String camPermHeaderTxt = getText(RingLoginPage.objCamPermHeader);
+		softAssertion.assertEquals(camPermHeaderTxt, "Camera Permission required");
+		logger.info("Camera Permission required popup");
 
-				else {
-					logger.info("Foreground camera permission options are not displayed");
-					extent.extentLoggerFail("Foreground camera permission options", "Foreground camera permission options are not displayed");
-				}
-
-			}
-
-			else {
-				logger.info("Enable Camera Permissions button is not displayed");
-				extent.extentLoggerFail("Enable Camera Permissions button", "Enable Camera Permissions button is not Displayed");
-			}
-
-		}
-
-		else {
-			logger.info("Popup is not displayed");
-			extent.extentLoggerFail("Allow popup", "Allow popup not displayed");
-		}
+		explicitWaitVisibility(RingLoginPage.objCamPermPopUp,10);
+	    Aclick(RingLoginPage.objCamPermPopUp, "Enable permissions button");
+		logger.info("Foreground allow camera permissions");
+		extent.extentLoggerPass("Foreground allow camera permissions", "Foreground allow camera permissions options");
+		explicitWaitVisibility(RingLoginPage.objAllowCamera,10);
+		Aclick(RingLoginPage.objAllowCamera, "While using the app foreground camera permission option");
+		
+		explicitWaitVisibility(RingLoginPage.objQrCodeHeader,10);		
+		logger.info("Don't have QR Code header");
+		String qrCodeHeader = getText(RingLoginPage.objQrCodeHeader);
+		softAssertion.assertEquals(qrCodeHeader, "Don't have a QR code?");
 	}
 	
 	/**
@@ -560,7 +693,7 @@ public class RingPayBusinessLogic extends Utilities{
 							extent.extentLoggerWarning("Application Readiness",
 									"Application is hung in repayment success page, killing and relaunching the app...");
 							closeAndroidApp();
-							RingPayAppLaunch();
+							//User_Play_Store_Flow();
 							ringPayLogin(reloginMobNumber);
 							explicitWaitVisibility(RingLoginPage.objAdCloseBtn, 10);
 							Aclick(RingLoginPage.objAdCloseBtn, "AD Close button");

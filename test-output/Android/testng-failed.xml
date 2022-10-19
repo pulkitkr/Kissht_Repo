@@ -12,24 +12,19 @@
   </listeners>
   <test thread-count="1" name="RingPay(failed)">
     <parameter name="withinLimitAmount" value="1"/>
-    <parameter name="MobileNumber" value="9731239214"/>
+    <parameter name="Space_MobileNumber" value="8124 4"/>
     <parameter name="CVV" value="123"/>
     <parameter name="exceedAmount" value="5000"/>
+    <parameter name="SpecialCharacters_MobileNumber" value="8124,4"/>
+    <parameter name="EditValid_MobileNumber" value="8123267268"/>
     <parameter name="MerchantID" value="rpy.ipmerchant1234191702@icici"/>
+    <parameter name="Valid_MobileNumber" value="9731239214"/>
+    <parameter name="LessThanTenDigits_MobileNumber" value="8124569"/>
     <classes>
       <class name="com.RingPay.TestScripts.RingPayTestScripts">
         <methods>
           <include name="Before"/>
-          <include name="ringAuthApi_Negative"/>
-          <include name="ringMerchantPay"/>
-          <include name="ringRepayment"/>
-          <include name="ringAuthApi_Positive"/>
-          <include name="ringPayLogin"/>
-          <include name="ringLogout"/>
-          <include name="ringPayAppLaunch"/>
-          <include name="ringOtpApi_Positive"/>
-          <include name="ringAppQuit"/>
-          <include name="ringOtpApi_Negative"/>
+          <include name="User_Playstore_Flow" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.RingPay.TestScripts.RingPayTestScripts -->
     </classes>

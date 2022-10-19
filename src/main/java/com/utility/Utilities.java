@@ -207,6 +207,8 @@ public class Utilities extends ExtentReporter {
 			return true;
 		}
 	}
+	
+	
 
 	/**
 	 * Check element not present.
@@ -1434,6 +1436,11 @@ public class Utilities extends ExtentReporter {
 	 * @param time
 	 * @throws Exception
 	 */
+	
+	public void explicitWaitVisibilityNonDefault(By element, int time) throws Exception {
+		WebDriverWait wait1 = new WebDriverWait(getDriver(),time);
+		wait1.until(ExpectedConditions.visibilityOf(findElement(element)));
+	}
 	public void explicitWaitVisibility(By element, int time) throws Exception {
 		wait.until(ExpectedConditions.visibilityOf(findElement(element)));
 	}

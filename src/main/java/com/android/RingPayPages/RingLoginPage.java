@@ -26,8 +26,17 @@ public class RingLoginPage {
 	//Mobile login option
 	public static By objLoginMobile = By.xpath("//*[@text='Continue with Mobile']");
 	
+	//Google Login option
+	public static By objLoginGoogle = By.xpath("//*[@text='Continue with Google']");
+	
+	//Facebook Login option
+	public static By objLoginFacebook = By.xpath("//*[@text='Continue with Facebook']");
+	
+	//Terms of services footer link text
+	public static By objTermsLink_PrivacyFooter = By.xpath("//*[@text=' Terms of Services &  Privacy Policy']");
+	
 	//truecaller skip button
-	public static By objTruSkipBtn = By.xpath("//*[@resource-id='com.truecaller:id/continueWithDifferentNumber']");
+	public static By objTruSkipBtn = By.xpath("//*[@text='SKIP']");
 	
 	//None of the above button
 	public static By objNoneBtn = By.xpath("//*[@resource-id='com.google.android.gms:id/cancel']");
@@ -38,8 +47,36 @@ public class RingLoginPage {
 	//Enter mobile text field
 	public static By objMobTextField = By.xpath("//*[@class='android.widget.EditText']");
 	
+	//Next button
+	public static By objNextBtn = By.xpath("//*[@text='Next']");
+	
+	//Invalid mobile no text
+	public static By objMobError = By.xpath("//*[@text=' Please enter valid mobile number']");
+	
+	//entered mob number
+	public static By getEditMob(String editMob) {
+	return By.xpath("//*[@text='OTP Sent To +91 "+ editMob +" ']");
+	}
 	//Enter OTP header
 	public static By objOtpHeader = By.xpath("//*[@text='Enter OTP']");
+	
+	//OTP time text
+	public static By otpTimerTxt = By.xpath("(//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView' and (./preceding-sibling::* | ./following-sibling::*)[@class='android.view.ViewGroup']]]/*[@text])[2]");
+	
+	//Did not receive OTP
+	public static By OtpTimeOut = By.xpath("//*[contains(text(),'receive OTP?']");
+	
+	//Auto-read OTP text
+	public static By OtpAutoRead = By.xpath("//*[@text='Auto Reading OTP']");
+	
+	//Resend OTP txt
+	public static By resendOtpTxt = By.xpath("//*[@text='Resend OTP']");
+	
+	//Wrong OTP text
+	public static By OtpError = By.xpath("//*[@text='You have entered incorrect or expired OTP']");
+	
+	//Edit mobile number
+	public static By objEditMobNo = By.xpath("//*[@text='Edit']");
 	
 	//OTP text place first
 	public static By objOtpTxtField1 = By.xpath("//*[@class='android.widget.EditText']");
